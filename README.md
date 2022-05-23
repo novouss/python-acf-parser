@@ -1,4 +1,4 @@
-# Steam Application Cace File Parser
+# Steam Application Cache File Parser
 An ACF file is a cache file used by Valve Steam, a software package used for downloading games. It contains information related to the software and is used for the original download as well as game updates. `steamfile.py` provides the ability for python to read and parse the information inside this file. Program returns a dictionary data type of the acf file.
 
 ## Importing...
