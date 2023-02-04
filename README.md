@@ -1,34 +1,60 @@
 # Steam Application Cache File Parser
-An ACF file is a cache file used by Valve Steam, a software package used for downloading games. It contains information related to the software and is used for the original download as well as game updates. `steamfile.py` provides the ability for python to read and parse the information inside this file. Program returns a dictionary data type of the acf file.
+An ACF file is a cache file used by Valve Steam, a software package used for downloading games. It contains information related to the software and is used for the original download as well as game updates. `steamapps.py` provides the ability for python to read and parse the information inside this file. Program returns a dictionary data type of the acf file.
+
+A pip install query will soon be added.
 
 ## Importing...
 ```py
-from steamfile as steamfile
+import steamapps as sa
 ```
 
-## How to use...
+# Reading steamapps
 ```py
-import os 
+import steamapps as sa
 
 # Create path to acf file
-directory = os.path.dirname(os.path.realpath(__file__))
-acf_dir = directory + '\\appmanifest_730.acf' 
-# appmanifest_730.acf is Counter-Strike: Global Offensive and will be used as demonstration.
+dir = "C:\\Program Files (x86)\\Steam\\steamapps\\"
 
-# Initialize steamfile() and use method load()
-# load() would return a dict data type of the acf file
-acf = steamfile()
-acf_gamefile = acf.load(acf_dir)
+# Call the 'read_dir' function
+appmanifest = sa.read_dir(dir)
 ```
 
-## Retrieving game information
+## Reading information from a directory
+
+The first index is the appmanifest number of the game you're peering into. Then the second index is the information you wish to retrieve from the appamnifest.
+
 ```py
-print(acf_gamefile["appid"])
+print(appmanifest['730']["appid"])
 # Returns 730
-print(acf_gamefile["name"])
+print(appmanifest['730']["name"])
 # Returns Counter-Strike: Global Offensive
-print(acf_gamefile["installdir"])
-# Returns Counter-Strike Global Offensive
-print(acf_gamefile["LastUpdated"])
-# Returns 7592902989
+print(appmanifest['730']["LauncherPath"])
+# Returns C:\\\\Program Files (x86)\\\\Steam\\\\steam.exe
+print(appmanifest['730']["LastUpdated"])
+# Returns 1675432013
+```
+
+# Reading from a single appmanifest file
+```py
+import steamapps as sa
+
+# Create path to acf file
+dir = "C:\\Program Files (x86)\\Steam\\steamapps\\"
+acf = 'appmanifest_730.acf'
+# appmanifest_730.acf is Counter-Strike: Global Offensive and will be used as demonstration.
+
+# Call the 'read_acf' function
+appmanifest = sa.read_acf(dir + acf)
+```
+
+## Reading information from an acf file
+```py
+print(appmanifest["appid"])
+# Returns 730
+print(appmanifest["name"])
+# Returns Counter-Strike: Global Offensive
+print(appmanifest["LauncherPath"])
+# Returns C:\\\\Program Files (x86)\\\\Steam\\\\steam.exe
+print(appmanifest["LastUpdated"])
+# Returns 1675432013
 ```

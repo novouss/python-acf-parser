@@ -1,14 +1,9 @@
-# Importing the class file
-from steamfile import steamfile
-import os
+import steamapps as sa
 
 # Create path to acf file
-directory = os.path.dirname(os.path.realpath(__file__))
-acf_dir = directory + '\\appmanifest_730.acf'
+dir = "C:\\Program Files (x86)\\Steam\\steamapps\\"
+acf = 'appmanifest_730.acf'
+# appmanifest_730.acf is Counter-Strike: Global Offensive and will be used as demonstration.
 
-# Initialize steamfile() and use method load()
-# load() would return a dict data type of the acf file
-acf = steamfile()
-acf_gamefile = acf.load(acf_dir)
-
-print(acf_gamefile)
+# Call the 'read_acf' function
+appmanifest = sa.read_acf(dir + acf)

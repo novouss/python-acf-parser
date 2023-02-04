@@ -1,43 +1,56 @@
 "AppState"
 {
 	"appid"		"730"
-	"Universe"		"1"
+	"universe"		"1"
+	"LauncherPath"		"C:\\Program Files (x86)\\Steam\\steam.exe"
 	"name"		"Counter-Strike: Global Offensive"
 	"StateFlags"		"4"
 	"installdir"		"Counter-Strike Global Offensive"
-	"LastUpdated"		"1592902989"
-	"UpdateResult"		"0"
-	"SizeOnDisk"		"23062555741"
-	"buildid"		"5201019"
+	"LastUpdated"		"1675432013"
+	"SizeOnDisk"		"31909311456"
+	"StagingSize"		"0"
+	"buildid"		"10465897"
 	"LastOwner"		"76561198157324373"
-	"BytesToDownload"		"22477616"
-	"BytesDownloaded"		"22477616"
+	"UpdateResult"		"0"
+	"BytesToDownload"		"111120"
+	"BytesDownloaded"		"111120"
+	"BytesToStage"		"793792"
+	"BytesStaged"		"793792"
+	"TargetBuildID"		"10465897"
 	"AutoUpdateBehavior"		"0"
 	"AllowOtherDownloadsWhileRunning"		"2"
-	"ScheduledAutoUpdate"		"0"
+	"ScheduledAutoUpdate"		"1675441491"
 	"InstalledDepots"
 	{
 		"732"
 		{
-			"manifest"		"6170877622570451739"
+			"manifest"		"3548085217241845931"
+			"size"		"363606710"
 		}
 		"731"
 		{
-			"manifest"		"6869489135525115815"
+			"manifest"		"7134258815016540870"
+			"size"		"31545704746"
 		}
 		"735"
 		{
 			"manifest"		"3867231304834558645"
+			"size"		"0"
 		}
 	}
-	"MountedDepots"
+	"SharedDepots"
 	{
-		"732"		"6170877622570451739"
-		"731"		"6869489135525115815"
-		"735"		"3867231304834558645"
+		"228988"		"228980"
+		"228990"		"228980"
 	}
 	"UserConfig"
 	{
 		"language"		"english"
+		"BetaKey"		""
+	}
+	"MountedConfig"
+	{
+		"language"		"english"
+		"BetaKey"		""
 	}
 }
